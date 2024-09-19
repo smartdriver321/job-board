@@ -1,4 +1,5 @@
 import prisma from '@/lib/prisma'
+import JobFilterSidebar from '@/components/JobFilterSidebar'
 import JobListItem from '@/components/JobListItem'
 
 export default async function HomePage() {
@@ -13,11 +14,16 @@ export default async function HomePage() {
 				<h1 className='sm:text-4xl lg: text-5xl font-extrabold tracking-tight '>
 					Developer Jobs
 				</h1>
-				<p className='text-muted-foreground'>Find your dream job</p>
+				<p className='text-muted-foreground'>Find your dream job.</p>
 			</div>
-			{jobs.map((job) => (
-				<JobListItem job={job} key={job.id} />
-			))}
+			<section className='flex flex-col gap-4 md:flex-row'>
+				<JobFilterSidebar />
+				<div className='grow space-y-4'>
+					{jobs.map((job) => (
+						<JobListItem job={job} key={job.id} />
+					))}
+				</div>
+			</section>
 		</main>
 	)
 }
