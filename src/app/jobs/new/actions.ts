@@ -27,6 +27,7 @@ export async function createJobPosting(formData: FormData) {
 
 	const slug = `${toSlug(title)}-${nanoid(10)}`
 
+	// eslint-disable-next-line no-undefined
 	let companyLogoUrl: string | undefined = undefined
 
 	if (companyLogo) {

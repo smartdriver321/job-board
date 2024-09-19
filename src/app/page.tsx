@@ -43,6 +43,7 @@ export function generateMetadata({
 }
 
 export default async function HomePage({
+	// eslint-disable-next-line no-unused-vars
 	searchParams: { q, type, location, remote, page },
 }: PageProps) {
 	const filterValues: JobFilterValues = {

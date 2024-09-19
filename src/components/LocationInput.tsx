@@ -5,6 +5,7 @@ import { Input } from './ui/input'
 
 interface LocationInputProps
 	extends React.InputHTMLAttributes<HTMLInputElement> {
+	// eslint-disable-next-line no-unused-vars
 	onLocationSelected: (location: string) => void
 }
 

@@ -30,6 +30,7 @@ interface AdminButtonProps {
 }
 
 function ApproveSubmissionButton({ jobId }: AdminButtonProps) {
+	// eslint-disable-next-line no-undefined
 	const [formState, formAction] = useFormState(approveSubmission, undefined)
 
 	return (
@@ -46,6 +47,7 @@ function ApproveSubmissionButton({ jobId }: AdminButtonProps) {
 }
 
 function DeleteJobButton({ jobId }: AdminButtonProps) {
+	// eslint-disable-next-line no-undefined
 	const [formState, formAction] = useFormState(deleteJob, undefined)
 
 	return (

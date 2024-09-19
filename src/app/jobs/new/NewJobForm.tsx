@@ -127,6 +127,7 @@ export default function NewJobForm() {
 						<FormField
 							control={control}
 							name='companyLogo'
+							// eslint-disable-next-line no-unused-vars
 							render={({ field: { value, ...fieldValues } }) => (
 								<FormItem>
 									<FormLabel>Company logo</FormLabel>
